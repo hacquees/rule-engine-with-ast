@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h2>Create Rule</h2>
+    <form id="createRuleForm">
+        <label for="createRuleString">Rule String</label>
+        <textarea id="createRuleString" rows="3" required></textarea>
+        <button type="submit">Create Rule</button>
+    </form>
+    <div id="createRuleResult" class="result"></div>
+
+    <h2>Combine Rules</h2>
+    <form id="combineRulesForm">
+        <label for="combineRulesStrings">Rule Strings (one per line)</label>
+        <textarea id="combineRulesStrings" rows="5" required></textarea>
+        <button type="submit">Combine Rules</button>
+    </form>
+    <div id="combineRulesResult" class="result"></div>
+
+    <h2>Evaluate Rule</h2>
+    <form id="evaluateRuleForm" method="POST">
+        <label for="evaluateRuleAST">AST</label>
+        <textarea id="evaluateRuleAST" rows="3" required></textarea>
+        <label for="evaluateUserData">User Data (JSON format)</label>
+        <textarea id="evaluateUserData" rows="3" required></textarea>
+        <button type="submit">Evaluate Rule</button>
+    </form>
+    <div id="evaluateRuleResult" class="result"></div>
+{% endblock %}
