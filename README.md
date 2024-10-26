@@ -1,4 +1,22 @@
 # Rule Engine with Abstract Syntax Tree (AST)
+## Table of Contents
+1. [Objective](#objective)
+2. [Data Structure](#data-structure)
+   - [Node Structure](#node-structure)
+   - [AST Representation Example](#ast-representation-example)
+3. [Data Storage](#data-storage)
+   - [Sample Database Entry for Combined Rules](#sample-database-entry-for-combined-rules)
+   - [Explanation of Fields](#explanation-of-fields)
+4. [Database Schema Visual](#database-schema-visual)
+5. [Key Points for Evaluation](#key-points-for-evaluation)
+   - [Example User Data](#example-user-data)
+6. [Sample Rules](#sample-rules)
+7. [API Design](#api-design)
+   - [`create_rule(rule_string):`](#create_rule)
+   - [`combine_rules(rules):`](#combine_rules)
+   - [`evaluate_rule(user_data):`](#evaluate_rule)
+8. [Requirements](#requirements)
+9. [Conclusion](#conclusion)
 
 ## Objective
 Develop a 3-tier rule engine application with a simple UI, API, and backend. This application determines user eligibility based on attributes like age, department, income, and spending. The system uses an Abstract Syntax Tree (AST) for conditional rule representation, allowing dynamic creation, combination, and modification of rules.
@@ -126,7 +144,7 @@ Combined rules are stored in MongoDB with the following structure:
 **Visual Representation:** ![Visual Representation of evaluate_rule](images/evaluate_rule.png)
 
 ## Requirements
-Install the following dependencies listed in requirements.txt:
+Install the following dependencies listed in `requirements.txt`:
 
 ```plaintext
 pymongo==4.3.3
@@ -137,3 +155,4 @@ Flask-PyMongo==2.3.0
 
 ## Conclusion
 This rule engine application allows flexible and dynamic eligibility evaluation using AST-based rules, simplifying the process of creating, combining, and modifying rules. Designed for scalability, it adheres to best practices in data structure, storage, and API design.
+
